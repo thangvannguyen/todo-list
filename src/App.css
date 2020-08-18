@@ -6,6 +6,68 @@
   height: 40vmin;
   pointer-events: none;
 }
+.list-todo{
+  line-height: 20px;
+  text-align: left;
+}
+.list-todo input , .list-todo button{
+  margin-left: 20px;
+  margin-top: 20px;
+  outline-color: palevioletred;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid palevioletred;
+  border-radius: 2px;
+}
+.list-todo input{
+  height: 30px;
+}
+.list-todo button{
+  height: 34px;
+}
+.list-todo h4{
+  margin-left: 20px;
+  margin-top: 20px;
+  color: palevioletred;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.list-todo .btn{
+  padding: 3px 10px;
+  background-color: palevioletred;
+  color: #fff;
+  border: 0 solid;
+  border-radius: 2px;
+  outline-style: none; 
+  cursor: pointer;
+ }
+ .list-todo .btn-clear{
+  padding: 3px 10px;
+  background-color: rebeccapurple;
+  color: #fff;
+  border: 0 solid;
+  border-radius: 2px;
+  outline-style: none; 
+  cursor: pointer;
+ }
+.list-todo ul {
+  list-style: none;
+  padding-left: 20px;
+}
+.list-todo ul li{
+  list-style: none;
+  padding: 5px 10px 5px 0px;
+  cursor: pointer;
+  color: palevioletred;
+}
+
+ .list-todo li::before {content: "🌻 "; color: palevioletred}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
