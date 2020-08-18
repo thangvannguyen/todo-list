@@ -21,7 +21,7 @@
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid palevioletred;
+  border: 2px solid palevioletred;
   border-radius: 2px;
 }
 .list-todo input{
