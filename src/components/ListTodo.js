@@ -13,7 +13,10 @@ function ListTodo(props) {
             setListItem(listItemNew);
             text.value = '';
             text.focus();
+        }else{
+            text.focus();
         }
+       
        
     };
     function clearItem(){ 
