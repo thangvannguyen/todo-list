@@ -10,6 +10,7 @@ function Item(props) {
     return (
         <li onClick={() => handleRemoveItem(props.indexItem) }> 
             {props.nameText }
+            <img src={props.coverImage} width="50" style={{width:50 , marginRight: 20 }}/>
         </li>
     )
 }
