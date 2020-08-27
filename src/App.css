@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -56,6 +57,53 @@
   outline-style: none; 
   cursor: pointer;
  }
+ .list-todo .btn-refresh{
+  padding: 3px 10px;
+  background-color: orangered;
+  color: #fff;
+  border: 0 solid;
+  border-radius: 2px;
+  outline-style: none; 
+  cursor: pointer;
+ }
+ .list-todo .btn-update{
+  background-color: blue;
+  margin-left: 5px;
+ }
+ .list-todo .btn-delete{
+    padding: 3px 10px;
+    background-color: red;
+    color: #fff;
+    border: 0 solid;
+    border-radius: 30px;
+    outline-style: none;
+    cursor: pointer;
+    margin: 0;
+    align-self: center;
+    position: absolute;
+    right: 0;
+    margin-right: 16px;
+    display: none;
+    transition: all 4s ease;
+    z-index: 3;
+ }
+ .list-todo .btn-show-update{
+    padding: 3px 10px;
+    background-color: blue;
+    color: #fff;
+    border: 0 solid;
+    border-radius: 30px;
+    outline-style: none;
+    cursor: pointer;
+    margin: 0;
+    align-self: center;
+    position: absolute;
+    right: 0;
+    margin-right: 120px;
+    display: none;
+    transition: all 4s ease;
+    z-index: 3;
+ }
 .list-todo ul {
   list-style: none;
   padding-left: 20px;
@@ -67,13 +115,50 @@
   color: palevioletred;
 }
 
- .list-todo li::before {content: "🌻 "; color: palevioletred}
+
+.list-todo li::before {content: ""; color: palevioletred}
+
+.list-todo ul li:hover .btn-delete , .list-todo ul li:hover .btn-show-update{
+  display: block;
+}
+
+.posision-r{
+  position: 'sticky'
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media (max-width:800px) {
+  .list-todo input {
+    width: 88%;
+    margin-right: 16px;
+  }
+  .list-todo .btn-show-update{
+    left: 14px;
+    font-size: 10px;
+    padding: 1px 10px;
+    height: 20px;
+    display: block;
+    text-align: center;
+  }
+  .list-todo .btn-delete{
+    left: 14px;
+    margin-top: 40px;
+    font-size: 10px;
+    height: 20px;
+    padding: 1px 12px;
+    text-align: center;
+    display: block;
+  }
+  .posision-r{
+    position: relative;
+  }
+  
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -97,4 +182,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+input::placeholder {
+  color: palevioletred;
+  opacity: 0.5; /* Firefox */
+}
+.alert-cfg{
+  max-width: 300px;
 }
